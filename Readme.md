@@ -30,7 +30,32 @@ This project details the mechanical and electrical conversion of a conventional 
 ## 🔌 System Architecture & Wiring Diagram
 
 The diagram below outlines the core electrical routing between the battery, microcontroller, inputs, and outputs.
-+--------------------------------+|      24V 12Ah Battery Pack     |+---------------+----------------+|v[Fuse / Switch]|v+------------------+     +--------+--------+     +-------------------+|  Twist Throttle  |---->|                 |<----+  Electric Brakes  ||  (Input Command) |     | Microcontroller |     |  (Safety Cut-off) |+------------------+     |   / Motor ESC   |     +-------------------++--------+--------+|+------------------+------------------+|                                     |v                                     v+---------+---------+                 +---------+---------+|  24V 350W DC Motor|                 |   LED Headlight   |+-------------------+                 +-------------------+
+```text
+                  +--------------------------------+
+
+                  |      24V 12Ah Battery Pack     |
+                  +---------------+----------------+
+                                  |
+                                  v
+                             [Fuse / Switch]
+                                  |
+                                  v
++------------------+     +--------+--------+     +-------------------+
+
+|  Twist Throttle  |---->|                 |<----+  Electric Brakes  |
+|  (Input Command) |     | Microcontroller |     |  (Safety Cut-off) |
++------------------+     |   / Motor ESC   |     +-------------------+
+                         +--------+--------+
+                                  |
+               +------------------+------------------+
+
+               |                                     |
+               v                                     v
+     +---------+---------+                 +---------+---------+
+
+     |  24V 350W DC Motor|                 |   LED Headlight   |
+     +-------------------+                 +-------------------+
+```
 
 ## 🛠️ Step-by-Step Assembly Guide
 
